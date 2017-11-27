@@ -1,7 +1,6 @@
 package by.htp.rentStation.entity.accessory;
 
 import by.htp.rentStation.entity.Category;
-import by.htp.rentStation.entity.Unit;
 
 public class Helmet extends Accessory {
 
@@ -9,8 +8,8 @@ public class Helmet extends Accessory {
 
 	}
 
-	public Helmet(int equipmentId, String title, Category category, String price) {
-		super(equipmentId, title, category, price);
+	public Helmet(int equipmentId, String title, Category category, String price, String size) {
+		super(equipmentId, title, category, price, size);
 	}
 
 	@Override
@@ -20,6 +19,6 @@ public class Helmet extends Accessory {
 
 	@Override
 	public String toStringFile() {
-		return "Helmet, " + getUnitId() + ", " + getTitle() + ", Category." + getCategory() + ", " + getPrice();
+		return "Helmet, " + getUnitId() + ", " + getTitle() + ", Category." + getCategory() + ", " + getPrice() + ", " + getSize();
 	}
 }

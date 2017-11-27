@@ -8,8 +8,8 @@ public class Bike extends Equipment {
 
 	}
 
-	public Bike(int equipmentId, String title, Category category, String price) {
-		super(equipmentId, title, category, price);
+	public Bike(int equipmentId, String title, Category category, String price, Gender gender) {
+		super(equipmentId, title, category, price, gender);
 	}
 
 	@Override
@@ -19,7 +19,7 @@ public class Bike extends Equipment {
 
 	@Override
 	public String toStringFile() {
-		return "Bike, " + getUnitId() + ", " + getTitle() + ", Category." + getCategory() + ", " + getPrice();
+		return "Bike, " + getUnitId() + ", " + getTitle() + ", Category." + getCategory() + ", " + getPrice() + ", " + getGender();
 	}
 
 }
