@@ -4,9 +4,10 @@ import by.htp.rentStation.entity.Category;
 import by.htp.rentStation.entity.Unit;
 
 public abstract class Equipment extends Unit {
+	private Enum sex;
 
 	public Equipment() {
-
+		
 	}
 
 	public Equipment(int equipmentId, String title, Category category, String price) {

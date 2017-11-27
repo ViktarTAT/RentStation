@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.htp.by/unitXMLSchema" xmlns:xl="http://www.htp.by/unitXMLSchema"
+	elementFormDefault="qualified">
+	<xs:element name="units">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="pattens" type="xl:BikeType"
+					minOccurs="0" />
+				<xs:element name="rollers" type="xl:RollerType"
+					minOccurs="0" />
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="BikeType">
+		<xs:sequence>
+			<xs:element name="patten" type="xl:UnitType" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="RollerType">
+		<xs:sequence>
+			<xs:element name="roller" type="xl:UnitType" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+
+
+	<xs:complexType name="UnitType">
+		<xs:sequence>
+			<xs:element name="unitId" type="xs:int" />
+			<xs:element name="title" type="xs:string" />
+			<xs:element name="category" type="xl:category_type" />
+			<xs:element name="price" type="xs:int" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="category_type">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="zima" />
+			<xs:enumeration value="leto" />
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="equipment">
+		<xs:complexContent>
+		<xs:extension base="xl:UnitType">
+				<xs:sequence>
+					<xs:element name="gender" type="ns:AccessorieType"/>
+				</xs:sequence>
+			</xs:extension>
+			</xs:complexContent>
+	</xs:complexType>
+	
+	<xs:complexType name="accessory">
+		<xs:complexContent>
+		<xs:extension base="xl:UnitType">
+				<xs:sequence>
+					<xs:element name="gender" type="ns:AccessorieType" minOccurs="1" maxOccurs="unbounded" />
+				</xs:sequence>
+			</xs:extension>
+			</xs:complexContent>
+	</xs:complexType>
+
+</xs:schema>
