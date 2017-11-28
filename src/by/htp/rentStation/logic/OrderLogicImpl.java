@@ -1,7 +1,7 @@
 package by.htp.rentStation.logic;
 
 import by.htp.rentStation.dao.UnitDAO;
-import by.htp.rentStation.dao.UnitDAOImpl;
+import by.htp.rentStation.dao.file.UnitDAOImpl;
 import by.htp.rentStation.entity.Order;
 import by.htp.rentStation.entity.RentUnit;
 import by.htp.rentStation.entity.Unit;
