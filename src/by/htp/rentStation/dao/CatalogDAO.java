@@ -1,20 +1,20 @@
 package by.htp.rentStation.dao;
 
-import java.util.List;
+import by.htp.rentStation.entity.Catalog;
 import by.htp.rentStation.entity.Unit;
 
 public interface CatalogDAO {
 
-	List<Unit> readCatalogUnit();
-	
-	List<Unit> readCatalogRentUnit();
-	
-	void writeCatalogUnit(List<Unit> catalog);
+	Catalog readCatalogUnit();
 
-	void writeCatalogRentUnit(List<Unit> catalog);
-	
+	Catalog readCatalogRentUnit();
+
+	void writeCatalogUnit(Catalog catalog);
+
+	void writeCatalogRentUnit(Catalog catalog);
+
 	void writeUnitInCatalogUnit(Unit unit);
 
 	void writeUnitInCatalogRentUnit(Unit unit);
-	
+
 }

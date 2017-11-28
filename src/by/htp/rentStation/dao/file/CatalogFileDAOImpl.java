@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import by.htp.rentStation.dao.CatalogDAO;
+import by.htp.rentStation.entity.Catalog;
 import by.htp.rentStation.entity.Unit;
 
 public class CatalogFileDAOImpl implements CatalogDAO {
@@ -12,40 +13,40 @@ public class CatalogFileDAOImpl implements CatalogDAO {
 	private static final String DELIMETER = ",";
 
 	@Override
-	public List<Unit> readCatalogUnit() {
+	public Catalog readCatalogUnit() {
 		return readCatalog(FILE_PATH);
 	}
 
 	@Override
-	public List<Unit> readCatalogRentUnit() {
+	public Catalog readCatalogRentUnit() {
 		return readCatalog(FILE_RENT_PATH);
 	}
 
-	private List<Unit> readCatalog(String filePath) {
-		List<Unit> catalog = new ArrayList<>();
+	private Catalog readCatalog(String filePath) {
+		List<Unit> units = new ArrayList<>();
 		List<String> lines = ReaderFile.readerList(filePath);
 
 		for (String line : lines) {
 			if (line != null) {
-				catalog.add(FactoryRentUnit.createUnit(line, DELIMETER));
+				units.add(FactoryRentUnit.createUnit(line, DELIMETER));
 			}
 		}
-		return catalog;
+		return new Catalog(units);
 	}
 
-	public void writeCatalogUnit(List<Unit> catalog) {
+	public void writeCatalogUnit(Catalog catalog) {
 		writeCatalog(catalog, FILE_PATH);
 	}
 
-	public void writeCatalogRentUnit(List<Unit> catalog) {
+	public void writeCatalogRentUnit(Catalog catalog) {
 		writeCatalog(catalog, FILE_RENT_PATH);
 	}
 
-	private void writeCatalog(List<Unit> catalog, String filePath) {
+	private void writeCatalog(Catalog catalog, String filePath) {
 
 		List<String> lines = new ArrayList<String>();
 
-		for (Unit unit : catalog) {
+		for (Unit unit : catalog.getUnits()) {
 			if (unit != null) {
 				lines.add(unit.toStringFile());
 			}
@@ -56,13 +57,13 @@ public class CatalogFileDAOImpl implements CatalogDAO {
 	@Override
 	public void writeUnitInCatalogUnit(Unit unit) {
 		WriterFile.writeLine(FILE_PATH, unit.toStringFile());
-		
+
 	}
 
 	@Override
 	public void writeUnitInCatalogRentUnit(Unit unit) {
 		WriterFile.writeLine(FILE_RENT_PATH, unit.toStringFile());
-		
+
 	}
 
 }
