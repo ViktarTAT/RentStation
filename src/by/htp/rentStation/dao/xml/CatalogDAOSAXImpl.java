@@ -10,10 +10,9 @@ import org.xml.sax.helpers.XMLReaderFactory;
 import by.htp.rentStation.dao.CatalogDAO;
 import by.htp.rentStation.entity.Catalog;
 import by.htp.rentStation.entity.Unit;
-
+import static by.htp.rentStation.util.Constant.*;
 
 public class CatalogDAOSAXImpl implements CatalogDAO {
-	private static final String XML_FILE_PATH = "source/unit.xml";
 
 	@Override
 	public Catalog readCatalogUnit() {

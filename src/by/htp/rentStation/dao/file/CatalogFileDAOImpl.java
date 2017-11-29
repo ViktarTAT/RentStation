@@ -6,10 +6,9 @@ import java.util.List;
 import by.htp.rentStation.dao.CatalogDAO;
 import by.htp.rentStation.entity.Catalog;
 import by.htp.rentStation.entity.Unit;
+import static by.htp.rentStation.util.Constant.*;
 
 public class CatalogFileDAOImpl implements CatalogDAO {
-	private static final String FILE_PATH = "C:\\Users\\VIKTAR\\eclipse-workspace\\RentStation\\source\\unit.txt";
-	private static final String FILE_RENT_PATH = "C:\\Users\\VIKTAR\\eclipse-workspace\\RentStation\\source\\unitRent.txt";
 	private static final String DELIMETER = ",";
 
 	@Override

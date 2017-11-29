@@ -34,26 +34,30 @@ public class CatalogDataHandler extends DefaultHandler {
 		switch (localName) {
 		case "bike":
 			unit = new Bike();
-			id = parsStringToInt(attributes.getValue("id"));
+			id = parsId(attributes);
 			unit.setUnitId(id);
 			break;
 		case "roller":
 			unit = new Roller();
-			id = parsStringToInt(attributes.getValue("id"));
+			id = parsId(attributes);
 			unit.setUnitId(id);
 			break;
 		case "helmet":
 			unit = new Helmet();
-			id = parsStringToInt(attributes.getValue("id"));
+			id = parsId(attributes);
 			unit.setUnitId(id);
 			break;
 		case "protected":
 			unit = new Protect();
-			id = parsStringToInt(attributes.getValue("id"));
+			id = parsId(attributes);
 			unit.setUnitId(id);
 			break;
 		}
 		text = new StringBuilder();
+	}
+	
+	private static int parsId(Attributes attributes){
+		return parsStringToInt(attributes.getValue("id"));
 	}
 
 	private static int parsStringToInt(String text) {
