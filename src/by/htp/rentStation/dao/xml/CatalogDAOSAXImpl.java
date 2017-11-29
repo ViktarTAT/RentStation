@@ -12,7 +12,7 @@ import by.htp.rentStation.entity.Catalog;
 import by.htp.rentStation.entity.Unit;
 
 
-public class CatalogDAOXmlImpl implements CatalogDAO {
+public class CatalogDAOSAXImpl implements CatalogDAO {
 	private static final String XML_FILE_PATH = "source/unit.xml";
 
 	@Override
