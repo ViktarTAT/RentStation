@@ -1,4 +1,4 @@
-package by.htp.rentStation.dao.xml;
+package by.htp.rentStation.dao.xml.sax;
 
 import java.io.IOException;
 import java.util.List;

@@ -1,4 +1,4 @@
-package by.htp.rentStation.dao.xml;
+package by.htp.rentStation.dao.xml.sax;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

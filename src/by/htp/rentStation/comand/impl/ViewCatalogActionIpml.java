@@ -3,7 +3,7 @@ package by.htp.rentStation.comand.impl;
 import by.htp.rentStation.comand.StationAction;
 import by.htp.rentStation.dao.CatalogDAO;
 import by.htp.rentStation.dao.file.CatalogFileDAOImpl;
-import by.htp.rentStation.dao.xml.CatalogDAOSAXImpl;
+import by.htp.rentStation.dao.xml.sax.CatalogDAOSAXImpl;
 import by.htp.rentStation.entity.Catalog;
 import by.htp.rentStation.entity.Unit;
 import by.htp.rentStation.util.Print;

@@ -1,4 +1,4 @@
-package by.htp.rentStation.dao.xml;
+package by.htp.rentStation.dao.xml.stax;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
