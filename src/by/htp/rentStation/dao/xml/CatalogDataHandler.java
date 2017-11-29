@@ -1,11 +1,7 @@
 package by.htp.rentStation.dao.xml;
 
 import java.math.BigDecimal;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 
 import org.xml.sax.Attributes;
@@ -14,8 +10,9 @@ import org.xml.sax.helpers.DefaultHandler;
 
 import by.htp.rentStation.entity.Category;
 import by.htp.rentStation.entity.Unit;
+import by.htp.rentStation.entity.accessory.Accessory;
 import by.htp.rentStation.entity.accessory.Helmet;
-import by.htp.rentStation.entity.accessory.Protected;
+import by.htp.rentStation.entity.accessory.Protect;
 import by.htp.rentStation.entity.equipment.Bike;
 import by.htp.rentStation.entity.equipment.Equipment;
 import by.htp.rentStation.entity.equipment.Gender;
@@ -51,7 +48,7 @@ public class CatalogDataHandler extends DefaultHandler {
 			unit.setUnitId(id);
 			break;
 		case "protected":
-			unit = new Protected();
+			unit = new Protect();
 			id = parsStringToInt(attributes.getValue("id"));
 			unit.setUnitId(id);
 			break;
@@ -85,8 +82,33 @@ public class CatalogDataHandler extends DefaultHandler {
 			break;
 		case "gender":
 			Gender gender = Gender.createGender(text.toString());
-			Equipment equipment = (Equipment) unit;
-			equipment.setGender(gender);
+			if (unit instanceof Equipment) {
+				Equipment equipment = (Equipment) unit;
+				equipment.setGender(gender);
+			}
+			break;
+		case "size":
+			if (unit instanceof Accessory) {
+				Accessory accessory = (Accessory) unit;
+				accessory.setSize(text.toString());
+			}
+			if (Roller.class.equals(unit.getClass())) {
+				Roller roller = (Roller) unit;
+				int size = parsStringToInt(text.toString());
+				roller.setSize(size);
+			}
+			break;
+		case "growth":
+			if (Bike.class.equals(unit.getClass())) {
+				Bike bike = (Bike) unit;
+				int growth = parsStringToInt(text.toString());
+				bike.setGrowth(growth);;
+			}
+			if (Protect.class.equals(unit.getClass())) {
+				Protect protect = (Protect) unit;
+				int growth = parsStringToInt(text.toString());
+				protect.setGrowth(growth);;
+			}
 			break;
 		}
 	}

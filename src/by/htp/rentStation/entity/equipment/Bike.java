@@ -9,24 +9,22 @@ public class Bike extends Equipment {
 
 	}
 
-	public Bike(int equipmentId, String title, Category category, String price, Gender gender, int growh) {
+	public Bike(int equipmentId, String title, Category category, String price, Gender gender, int growht) {
 		super(equipmentId, title, category, price, gender);
-		this.growth = growh;
+		this.growth = growht;
 	}
 
-	public int getGrowh() {
+	public int getGrowth() {
 		return growth;
+	}
+
+	public void setGrowth(int growth) {
+		this.growth = growth;
 	}
 
 	@Override
 	public String toString() {
-		return "Bike " + super.toString();
-	}
-
-	@Override
-	public String toStringFile() {
-		return "Bike, " + getUnitId() + ", " + getTitle() + ", Category." + getCategory() + ", " + getPrice() + ", "
-				+ getGender() + ", " + growth;
+		return "Bike " + super.toString() + ", growth=" + growth;
 	}
 
 }

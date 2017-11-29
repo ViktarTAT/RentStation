@@ -48,7 +48,7 @@ public class CatalogFileDAOImpl implements CatalogDAO {
 
 		for (Unit unit : catalog.getUnits()) {
 			if (unit != null) {
-				lines.add(unit.toStringFile());
+				lines.add(unit.toString());
 			}
 		}
 		WriterFile.writeCatalog(filePath, lines);
@@ -56,13 +56,13 @@ public class CatalogFileDAOImpl implements CatalogDAO {
 
 	@Override
 	public void writeUnitInCatalogUnit(Unit unit) {
-		WriterFile.writeLine(FILE_PATH, unit.toStringFile());
+		WriterFile.writeLine(FILE_PATH, unit.toString());
 
 	}
 
 	@Override
 	public void writeUnitInCatalogRentUnit(Unit unit) {
-		WriterFile.writeLine(FILE_RENT_PATH, unit.toStringFile());
+		WriterFile.writeLine(FILE_RENT_PATH, unit.toString());
 
 	}
 

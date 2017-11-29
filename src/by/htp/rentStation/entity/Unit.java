@@ -62,8 +62,6 @@ public abstract class Unit implements Comparable<Unit> {// TODO serializable,
 		return " Id=" + unitId + ", title=" + title + ", category=" + category + ", price=" + price;
 	}
 
-	public abstract String toStringFile();
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;

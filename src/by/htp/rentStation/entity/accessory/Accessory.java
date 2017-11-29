@@ -5,7 +5,7 @@ import by.htp.rentStation.entity.Unit;
 
 public abstract class Accessory extends Unit {
 	private String size;
-	
+
 	public Accessory() {
 
 	}
@@ -14,17 +14,21 @@ public abstract class Accessory extends Unit {
 		super(equipmentId, title, category, price);
 		this.size = size;
 	}
-	
+
 	public String getSize() {
 		return size;
 	}
 
-	//TODO del
+	public void setSize(String size) {
+		this.size = size;
+	}
+
+	// TODO del
 	public int incrementCounter(int counter) {
 		return counter;
 	}
 
-	//TODO del
+	// TODO del
 	public int decreaseCounter(int counter) {
 		return counter;
 	}

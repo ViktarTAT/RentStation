@@ -23,9 +23,8 @@ public class Roller extends Equipment {
 	}
 
 	@Override
-	public String toStringFile() {
-		return "Roller, " + getUnitId() + ", " + getTitle() + ", Category." + getCategory() + ", " + getPrice() + ", "
-				+ getGender() + ", " + size;
+	public String toString() {
+		return "Roller " + super.toString() + ", size=" + size;
 	}
 
 }

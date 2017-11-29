@@ -34,4 +34,11 @@ public abstract class Equipment extends Unit {
 		counter--;
 		return counter;
 	}
+
+	@Override
+	public String toString() {
+		return super.toString() + ", gender=" + gender;
+	}
+	
+	
 }
