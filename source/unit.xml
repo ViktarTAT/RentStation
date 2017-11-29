@@ -1,40 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <units xmlns="http://www.htp.by/unitXMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.htp.by/unitXMLSchema unitXMLSchema.xsd">
-	<bike>
-		<unitId>111</unitId>
+	<bike id="111">
 		<title>aist</title>
 		<category>summer</category>
 		<price>114</price>
 		<gender>male</gender>
 		<growth>160</growth>
 	</bike>
-	<bike>
-		<unitId>111</unitId>
+	<bike id="112">
 		<title>aist</title>
 		<category>summer</category>
 		<price>114</price>
 		<gender>male</gender>
 		<growth>160</growth>
 	</bike>
-	<roller>
-		<unitId>112</unitId>
+	<roller id="113">
 		<title>aist</title>
 		<category>summer</category>
 		<price>114</price>
 		<gender>male</gender>
 		<size>40</size>
 	</roller>
-	<helmet>
-		<unitId>211</unitId>
+	<helmet id="211">
 		<title>aist</title>
 		<category>summer</category>
 		<price>114</price>
 		<size>40</size>
 		<color>5</color>
 	</helmet>
-	<protected>
-		<unitId>212</unitId>
+	<protected id="212">
 		<title>aist</title>
 		<category>summer</category>
 		<price>114</price>
