@@ -3,7 +3,7 @@ package by.htp.rentStation.entity;
 import java.math.BigDecimal;
 
 public abstract class Unit implements Comparable<Unit> {// TODO serializable,
-														
+
 	private int unitId;
 	private String title;
 	private Category category;
@@ -37,6 +37,22 @@ public abstract class Unit implements Comparable<Unit> {// TODO serializable,
 		return price;
 	}
 
+	public void setUnitId(int unitId) {
+		this.unitId = unitId;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
+
 	public abstract int incrementCounter(int counter);
 
 	public abstract int decreaseCounter(int counter);
@@ -45,8 +61,6 @@ public abstract class Unit implements Comparable<Unit> {// TODO serializable,
 	public String toString() {
 		return " Id=" + unitId + ", title=" + title + ", category=" + category + ", price=" + price;
 	}
-
-	public abstract String toStringFile();
 
 	@Override
 	public int hashCode() {
@@ -84,7 +98,7 @@ public abstract class Unit implements Comparable<Unit> {// TODO serializable,
 			return false;
 		return true;
 	}
-	
+
 	@Override
 	public int compareTo(Unit o) {
 		return this.unitId - o.unitId;

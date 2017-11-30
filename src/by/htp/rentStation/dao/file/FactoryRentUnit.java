@@ -1,4 +1,4 @@
-package by.htp.rentStation.dao;
+package by.htp.rentStation.dao.file;
 
 
 import by.htp.rentStation.entity.Category;
@@ -23,10 +23,10 @@ public class FactoryRentUnit {
 		mas = trimLine(mas);
 		switch (mas[0]) {
 		case "Bike":
-			unit = new Bike(Integer.parseInt(mas[1]),mas[2], Category.SUMMER, mas[4]);
+			//unit = new Bike(Integer.parseInt(mas[1]),mas[2], Category.SUMMER, mas[4]);
 			break;
 		case "Helmet":
-			unit = new Helmet(Integer.parseInt(mas[1]),mas[2], Category.SUMMER, mas[4]);
+			//unit = new Helmet(Integer.parseInt(mas[1]),mas[2], Category.SUMMER, mas[4]);
 			break;
 		}
 		return unit;

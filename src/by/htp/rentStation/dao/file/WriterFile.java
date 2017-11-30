@@ -1,4 +1,4 @@
-package by.htp.rentStation.dao;
+package by.htp.rentStation.dao.file;
 
 import java.io.FileWriter;
 import java.io.IOException;
