@@ -16,6 +16,7 @@ import by.htp.rentStation.dao.xml.stax.MenuTagName;
 import by.htp.rentStation.entity.Category;
 import by.htp.rentStation.entity.Unit;
 import by.htp.rentStation.entity.accessory.Helmet;
+import by.htp.rentStation.entity.accessory.Protect;
 import by.htp.rentStation.entity.equipment.Bike;
 import by.htp.rentStation.entity.equipment.Gender;
 import by.htp.rentStation.entity.equipment.Roller;
@@ -40,6 +41,18 @@ public class ParserDOM {
 	    units.add(unit);
 	}
 	
+	listUnits = getListByTagName(root, HELMET);
+	for (int i = 0; i < listUnits.getLength(); i++) {
+	    unit = createHelmet(listUnits.item(i));
+	    units.add(unit);
+	}
+	
+	listUnits = getListByTagName(root, PROTECT);
+	for (int i = 0; i < listUnits.getLength(); i++) {
+	    unit = createProtect(listUnits.item(i));
+	    units.add(unit);
+	}
+	
 	return units;
     }
 
@@ -55,7 +68,7 @@ public class ParserDOM {
 	Element child = (Element) list.item(0);
 	return child;
     }
-
+   
     private Unit createBike(Node node) {
 	Bike bike = new Bike();
 	bike = (Bike) createUnit(node, bike);
@@ -104,6 +117,22 @@ public class ParserDOM {
 	helmet.setColor(color);
 
 	return helmet;
+    }
+    
+    private Unit createProtect(Node node) {
+	Protect protect = new Protect();
+	protect = (Protect) createUnit(node, protect);
+
+	Element currentElement = (Element) node;
+	currentElement = getTags(node, SIZE);
+	String size = currentElement.getTextContent().trim();
+	protect.setSize(size);
+
+	currentElement = getTags(node, GROWTH);
+	String growth = currentElement.getTextContent().trim();
+	protect.setGrowth(convertInt(growth));
+
+	return protect;
     }
 
     private Unit createUnit(Node node, Unit unit) {
