@@ -1,3 +1,1 @@
 
-Bike, 112, aist2, Category.SUMMER, 5
-Helmet, 213, h3, Category.SUMMER, 2
