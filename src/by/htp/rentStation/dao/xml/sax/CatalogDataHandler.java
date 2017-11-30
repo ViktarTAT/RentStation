@@ -81,11 +81,11 @@ public class CatalogDataHandler extends DefaultHandler {
 			unit.setPrice(price);
 			break;
 		case "category":
-			Category category = Category.createCategory(text.toString());
+			Category category = Category.getCategory(text.toString());
 			unit.setCategory(category);
 			break;
 		case "gender":
-			Gender gender = Gender.createGender(text.toString());
+			Gender gender = Gender.getGender(text.toString());
 			if (unit instanceof Equipment) {
 				Equipment equipment = (Equipment) unit;
 				equipment.setGender(gender);

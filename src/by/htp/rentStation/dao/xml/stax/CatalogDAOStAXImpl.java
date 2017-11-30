@@ -23,6 +23,7 @@ public class CatalogDAOStAXImpl implements CatalogDAO{
 			inputStream = new FileInputStream(XML_FILE_PATH);
 			XMLStreamReader reader = inputFactory.createXMLStreamReader(inputStream);
 			
+			
 		} catch (FileNotFoundException | XMLStreamException e) {
 			e.printStackTrace();
 		}
