@@ -8,7 +8,7 @@
 				<xs:element name="bike" type="xl:BikeType" maxOccurs="unbounded" />
 				<xs:element name="roller" type="xl:RollerType" maxOccurs="unbounded" />
 				<xs:element name="helmet" type="xl:HelmetType" maxOccurs="unbounded" />
-				<xs:element name="protected" type="xl:ProtectedType" maxOccurs="unbounded"/>
+				<xs:element name="protect" type="xl:ProtectedType" maxOccurs="unbounded"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -50,7 +50,7 @@
 		</xs:complexContent>
 	</xs:complexType>
 
-	<xs:complexType name="ProtectedType">
+	<xs:complexType name="ProtectType">
 		<xs:complexContent>
 			<xs:extension base="xl:AccessoryType">
 				<xs:sequence>

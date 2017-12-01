@@ -14,8 +14,8 @@ public class ViewCatalogActionIpml implements StationAction {
 
 	public ViewCatalogActionIpml() {
 		//dao = new CatalogFileDAOImpl();
-		//dao = new CatalogDAOSAXImpl();
-		dao = new CatalogDAODOMImpl();
+		dao = new CatalogDAOSAXImpl();
+		//dao = new CatalogDAODOMImpl();
 	}
 
 	@Override

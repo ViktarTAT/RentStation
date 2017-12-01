@@ -50,13 +50,13 @@
 		<size>38</size>
 		<color>gold</color>
 	</helmet>
-	<protected id="221">
+	<protect id="221">
 		<title>protected</title>
 		<category>summer</category>
 		<price>3</price>
 		<size>xl</size>
 		<growth>160</growth>
-	</protected>
+	</protect>
 
 </units>
 	

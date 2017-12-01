@@ -1,7 +1,7 @@
 package by.htp.rentStation.dao.xml.dom;
 
 import static by.htp.rentStation.dao.DataTypeTransformUtil.*;
-import static by.htp.rentStation.dao.xml.stax.MenuTagName.*;
+import static by.htp.rentStation.dao.xml.MenuTagName.*;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import by.htp.rentStation.dao.xml.stax.MenuTagName;
+import by.htp.rentStation.dao.xml.MenuTagName;
 import by.htp.rentStation.entity.Category;
 import by.htp.rentStation.entity.Unit;
 import by.htp.rentStation.entity.accessory.Helmet;

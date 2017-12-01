@@ -1,5 +1,7 @@
 package by.htp.rentStation.dao.xml.sax;
 
+import static by.htp.rentStation.dao.xml.MenuTagName.*;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,6 +10,7 @@ import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
+import by.htp.rentStation.dao.xml.MenuTagName;
 import by.htp.rentStation.entity.Category;
 import by.htp.rentStation.entity.Unit;
 import by.htp.rentStation.entity.accessory.Accessory;
@@ -30,24 +33,24 @@ public class CatalogDataHandler extends DefaultHandler {
 	@Override
 	public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
 		int id;
-
-		switch (localName) {
-		case "bike":
+		MenuTagName tag = getTagName(localName);
+		switch (tag) {
+		case BIKE:
 			unit = new Bike();
 			id = parsId(attributes);
 			unit.setUnitId(id);
 			break;
-		case "roller":
+		case ROLLER:
 			unit = new Roller();
 			id = parsId(attributes);
 			unit.setUnitId(id);
 			break;
-		case "helmet":
+		case HELMET:
 			unit = new Helmet();
 			id = parsId(attributes);
 			unit.setUnitId(id);
 			break;
-		case "protected":
+		case PROTECT:
 			unit = new Protect();
 			id = parsId(attributes);
 			unit.setUnitId(id);
@@ -66,32 +69,33 @@ public class CatalogDataHandler extends DefaultHandler {
 
 	@Override
 	public void endElement(String uri, String localName, String qName) throws SAXException {
-		switch (localName) {
-		case "bike":
-		case "roller":
-		case "helmet":
-		case "protected":
+	    MenuTagName tag = getTagName(localName);
+		switch (tag) {
+		case BIKE:
+		case ROLLER:
+		case HELMET:
+		case PROTECT:
 			units.add(unit);
 			break;
-		case "title":
+		case TITLE:
 			unit.setTitle(text.toString().trim());
 			break;
-		case "price":
+		case PRICE:
 			BigDecimal price = new BigDecimal(text.toString().trim());
 			unit.setPrice(price);
 			break;
-		case "category":
+		case CATEGORY:
 			Category category = Category.getCategory(text.toString());
 			unit.setCategory(category);
 			break;
-		case "gender":
+		case GENDER:
 			Gender gender = Gender.getGender(text.toString());
 			if (unit instanceof Equipment) {
 				Equipment equipment = (Equipment) unit;
 				equipment.setGender(gender);
 			}
 			break;
-		case "size":
+		case SIZE:
 			if (unit instanceof Accessory) {
 				Accessory accessory = (Accessory) unit;
 				accessory.setSize(text.toString());
@@ -102,7 +106,7 @@ public class CatalogDataHandler extends DefaultHandler {
 				roller.setSize(size);
 			}
 			break;
-		case "growth":
+		case GROWTH:
 			if (Bike.class.equals(unit.getClass())) {
 				Bike bike = (Bike) unit;
 				int growth = parsStringToInt(text.toString());
@@ -116,10 +120,6 @@ public class CatalogDataHandler extends DefaultHandler {
 			break;
 		}
 	}
-
-	// private static double parseStringToDouble(String text){
-	// return Double.parseDouble(text.trim());
-	// }
 
 	@Override
 	public void characters(char[] ch, int start, int length) throws SAXException {
