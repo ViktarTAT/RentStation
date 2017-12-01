@@ -5,6 +5,7 @@ import by.htp.rentStation.dao.CatalogDAO;
 import by.htp.rentStation.dao.file.CatalogFileDAOImpl;
 import by.htp.rentStation.dao.xml.dom.CatalogDAODOMImpl;
 import by.htp.rentStation.dao.xml.sax.CatalogDAOSAXImpl;
+import by.htp.rentStation.dao.xml.stax.CatalogDAOStAXImpl;
 import by.htp.rentStation.entity.Catalog;
 import by.htp.rentStation.entity.Unit;
 import by.htp.rentStation.util.Print;
@@ -14,8 +15,9 @@ public class ViewCatalogActionIpml implements StationAction {
 
 	public ViewCatalogActionIpml() {
 		//dao = new CatalogFileDAOImpl();
-		dao = new CatalogDAOSAXImpl();
+		//dao = new CatalogDAOSAXImpl();
 		//dao = new CatalogDAODOMImpl();
+		dao = new CatalogDAOStAXImpl();
 	}
 
 	@Override
