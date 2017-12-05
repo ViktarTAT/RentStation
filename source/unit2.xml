@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<units xmlns="http://www.htp.by/unitXMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.htp.by/unitXMLSchema unitXMLSchema.xsd">
+	<bike id="111">
+		<title>aist</title>
+		<category>summer</category>
+		<price>5</price>
+		<gender>male</gender>
+		<growth>160</growth>
+	</bike>
+	<bike id="112">
+		<title>aist</title>
+		<category>summer</category>
+		<price>5</price>
+		<gender>female</gender>
+		<growth>150</growth>
+	</bike>
+	<bike id="113">
+		<title>orlik</title>
+		<category>summer</category>
+		<price>3.5</price>
+		<gender>male</gender>
+		<growth>160</growth>
+	</bike>
+	<roller id="120">
+		<title>roller1</title>
+		<category>summer</category>
+		<price>3</price>
+		<gender>male</gender>
+		<size>38</size>
+	</roller>
+	<roller id="121">
+		<title>roller2</title>
+		<category>summer</category>
+		<price>3</price>
+		<gender>female</gender>
+		<size>35</size>
+	</roller>
+	<helmet id="211">
+		<title>helmet</title>
+		<category>summer</category>
+		<price>2</price>
+		<size>40</size>
+		<color>red</color>
+	</helmet>
+	<helmet id="212">
+		<title>helmet2</title>
+		<category>summer</category>
+		<price>2.5</price>
+		<size>38</size>
+		<color>gold</color>
+	</helmet>
+	<protect id="221">
+		<title>protected</title>
+		<category>summer</category>
+		<price>3</price>
+		<size>xl</size>
+		<growth>160</growth>
+	</protect>
+
+</units>
+	

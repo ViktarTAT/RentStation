@@ -1,5 +1,7 @@
 package by.htp.rentStation.dao.xml.stax;
 
+import static by.htp.rentStation.util.Constant.*;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -11,7 +13,7 @@ import javax.xml.stream.XMLStreamReader;
 import by.htp.rentStation.dao.CatalogDAO;
 import by.htp.rentStation.entity.Catalog;
 import by.htp.rentStation.entity.Unit;
-import static by.htp.rentStation.util.Constant.*;
+
 
 public class CatalogDAOStAXImpl implements CatalogDAO {
 
@@ -22,8 +24,8 @@ public class CatalogDAOStAXImpl implements CatalogDAO {
 
     @Override
     public Catalog readCatalogRentUnit() {
-	// TODO Auto-generated method stub
-	return null;
+	writeCatalogRentUnit(new Catalog());
+	return readCatalog(XML_FILE_RENT_PATH);
     }
     
     private static Catalog readCatalog(String filePath) {
@@ -50,7 +52,9 @@ public class CatalogDAOStAXImpl implements CatalogDAO {
 
     @Override
     public void writeCatalogRentUnit(Catalog catalog) {
-	// TODO Auto-generated method stub
+	catalog = readCatalog(XML_FILE_PATH);
+	CatalogStAXWriter stax = new CatalogStAXWriter();
+	stax.writeCatalog(catalog, XML_FILE_RENT_PATH);
 
     }
 
