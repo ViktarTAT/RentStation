@@ -8,7 +8,7 @@
 				<xs:element name="bike" type="xl:BikeType" maxOccurs="unbounded" />
 				<xs:element name="roller" type="xl:RollerType" maxOccurs="unbounded" />
 				<xs:element name="helmet" type="xl:HelmetType" maxOccurs="unbounded" />
-				<xs:element name="protected" type="xl:ProtectedType" maxOccurs="unbounded"/>
+				<xs:element name="protect" type="xl:ProtectedType" maxOccurs="unbounded"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -44,13 +44,13 @@
 		<xs:complexContent>
 			<xs:extension base="xl:AccessoryType">
 				<xs:sequence>
-					<xs:element name="color" type="xs:int" maxOccurs="1" />
+					<xs:element name="color" type="xs:string" maxOccurs="1" />
 				</xs:sequence>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
 
-	<xs:complexType name="ProtectedType">
+	<xs:complexType name="ProtectType">
 		<xs:complexContent>
 			<xs:extension base="xl:AccessoryType">
 				<xs:sequence>
@@ -64,7 +64,7 @@
 		<xs:sequence>
 			<xs:element name="title" type="xs:string" />
 			<xs:element name="category" type="xl:CategotyType" />
-			<xs:element name="price" type="xs:int" />
+			<xs:element name="price" type="xs:double" />
 		</xs:sequence>
 		<xs:attribute name="id" type="xs:int" />
 	</xs:complexType>
@@ -100,7 +100,7 @@
 		<xs:complexContent>
 			<xs:extension base="xl:UnitType">
 				<xs:choice>
-					<xs:element name="size" type="xs:int" />
+					<xs:element name="size" type="xs:string" />
 				</xs:choice>
 			</xs:extension>
 		</xs:complexContent>

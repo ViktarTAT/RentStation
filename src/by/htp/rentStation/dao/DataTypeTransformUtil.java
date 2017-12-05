@@ -6,15 +6,14 @@ import java.util.Date;
 
 public class DataTypeTransformUtil {
 
-    public static int convertId(String id) {
-	int idInt = 0;
+    public static int convertInt(String textInt) {
+	int number = 0;
 	try {
-	    idInt = Integer.parseInt(id);
+	    number = Integer.parseInt(textInt);
 	} catch (NumberFormatException e) {
-	    System.out.println("wrong value for id");
 	    e.printStackTrace();
 	}
-	return idInt;
+	return number;
     }
     
     public static double convertPrice(String price) {

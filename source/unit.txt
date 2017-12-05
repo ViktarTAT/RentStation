@@ -1,6 +1,10 @@
+Bike, 111, aist, Category.SUMMER, 5, 
+Bike, 112, aist, Category.SUMMER, 5
+Bike, 113, orlik, Category.SUMMER, 3.5
 Bike, 114, orlik, Category.SUMMER, 3.5
-Helmet, 212, h2, Category.SUMMER, 1.5
 Bike, 115, orlik, Category.SUMMER, 3.5
-Bike, 116, orlik, Category.SUMMER, 3.5
+Roller, 116 , roller1, Category.SUMMER, 3, 38
+Helmet, 212, h2, Category.SUMMER, 1.5
+Helmet, 213, h3, Category.SUMMER, 2
 Helmet, 214, h1, Category.SUMMER, 2
-Bike, 111, aist2, Category.SUMMER, 5
+

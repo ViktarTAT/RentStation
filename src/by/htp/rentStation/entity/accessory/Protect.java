@@ -24,7 +24,7 @@ public class Protect extends Accessory {
 
 	@Override
 	public String toString() {
-		return "Protected "+ super.toString() + ", growth=" + growth;
+		return "Protect "+ super.toString() + ", growth=" + growth;
 	}
 
 	
