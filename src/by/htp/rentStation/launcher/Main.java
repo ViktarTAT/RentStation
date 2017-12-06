@@ -2,8 +2,7 @@ package by.htp.rentStation.launcher;
 
 import by.htp.rentStation.comand.CommandHendler;
 import by.htp.rentStation.comand.StationAction;
-
-import by.htp.rentStation.util.Menu;
+import by.htp.rentStation.view.Menu;
 
 public class Main {
 	public static void main(String[] args) {

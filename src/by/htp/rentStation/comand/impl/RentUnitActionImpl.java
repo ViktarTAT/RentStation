@@ -2,8 +2,8 @@ package by.htp.rentStation.comand.impl;
 
 import by.htp.rentStation.comand.StationAction;
 import by.htp.rentStation.logic.OrderLogicImpl;
-import by.htp.rentStation.util.Menu;
-import by.htp.rentStation.util.Print;
+import by.htp.rentStation.view.Menu;
+import by.htp.rentStation.view.Print;
 
 public class RentUnitActionImpl implements StationAction {
 

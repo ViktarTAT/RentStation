@@ -12,11 +12,11 @@ public class ReturnUnitImpl implements ReturnUnit {
 	public BigDecimal closseOrder(Order order){
 		BigDecimal price;// = new BigDecimal("0");
 		Calendar realTime = (GregorianCalendar) GregorianCalendar.getInstance();
-		price = order.getTotalPrice().multiply(new BigDecimal(order.getTimeRent()));
+		price = order.getTotalPriceHour().multiply(new BigDecimal(order.getTimeRent()));
 		
 		if(realTime.get(Calendar.HOUR) > order.getTimeReturnRent().get(Calendar.HOUR)){
 			int fineTime = realTime.get(Calendar.HOUR) - order.getTimeReturnRent().get(Calendar.HOUR);
-			BigDecimal temp = order.getTotalPrice().multiply(new BigDecimal(fineTime));
+			BigDecimal temp = order.getTotalPriceHour().multiply(new BigDecimal(fineTime));
 			price = price.multiply(temp);
 		}
 		return price;

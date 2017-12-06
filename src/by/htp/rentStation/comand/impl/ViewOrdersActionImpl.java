@@ -5,7 +5,7 @@ import java.util.List;
 
 import by.htp.rentStation.comand.StationAction;
 import by.htp.rentStation.entity.Order;
-import by.htp.rentStation.util.Print;
+import by.htp.rentStation.view.Print;
 
 public class ViewOrdersActionImpl implements StationAction {
 	private List<Order> orders;

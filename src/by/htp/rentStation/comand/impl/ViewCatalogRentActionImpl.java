@@ -6,7 +6,7 @@ import by.htp.rentStation.dao.file.CatalogFileDAOImpl;
 import by.htp.rentStation.dao.xml.stax.CatalogDAOStAXImpl;
 import by.htp.rentStation.entity.Catalog;
 import by.htp.rentStation.entity.Unit;
-import by.htp.rentStation.util.Print;
+import by.htp.rentStation.view.Print;
 
 public class ViewCatalogRentActionImpl implements StationAction {
 
