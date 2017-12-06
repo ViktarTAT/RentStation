@@ -26,12 +26,10 @@ public class CatalogStAXWriter {
 	    writer.writeStartElement("units");
 
 	    for (Unit unit : units) {
-		System.out.println("-->" + unit);
+		
 		if (unit != null) {
 		    String string = unit.getClass().toString();
 		    String[] temp = string.split("\\.");
-		    System.out.println(string);
-		    System.out.println(temp.length);
 		    String sunit = temp[temp.length - 1].toLowerCase();
 		    MenuTagName tag = getTagName(sunit);
 		    switch (tag) {
