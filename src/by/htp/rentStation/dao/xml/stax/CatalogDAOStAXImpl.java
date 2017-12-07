@@ -11,8 +11,8 @@ import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamReader;
 
 import by.htp.rentStation.dao.CatalogDAO;
-import by.htp.rentStation.entity.Catalog;
-import by.htp.rentStation.entity.Unit;
+import by.htp.rentStation.domain.Catalog;
+import by.htp.rentStation.domain.Unit;
 
 
 public class CatalogDAOStAXImpl implements CatalogDAO {

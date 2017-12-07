@@ -1,6 +1,6 @@
 package by.htp.rentStation.dao;
 
-import by.htp.rentStation.entity.Unit;
+import by.htp.rentStation.domain.Unit;
 
 public interface UnitDAO {
 	

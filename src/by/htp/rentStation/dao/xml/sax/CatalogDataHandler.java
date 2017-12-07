@@ -12,15 +12,15 @@ import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 import by.htp.rentStation.dao.xml.MenuTagName;
-import by.htp.rentStation.entity.Category;
-import by.htp.rentStation.entity.Unit;
-import by.htp.rentStation.entity.accessory.Accessory;
-import by.htp.rentStation.entity.accessory.Helmet;
-import by.htp.rentStation.entity.accessory.Protect;
-import by.htp.rentStation.entity.equipment.Bike;
-import by.htp.rentStation.entity.equipment.Equipment;
-import by.htp.rentStation.entity.equipment.Gender;
-import by.htp.rentStation.entity.equipment.Roller;
+import by.htp.rentStation.domain.Category;
+import by.htp.rentStation.domain.Unit;
+import by.htp.rentStation.domain.accessory.Accessory;
+import by.htp.rentStation.domain.equipment.Equipment;
+import by.htp.rentStation.domain.accessory.Helmet;
+import by.htp.rentStation.domain.accessory.Protect;
+import by.htp.rentStation.domain.equipment.Bike;
+import by.htp.rentStation.domain.equipment.Gender;
+import by.htp.rentStation.domain.equipment.Roller;
 
 public class CatalogDataHandler extends DefaultHandler {
     private StringBuilder text;

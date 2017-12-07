@@ -8,8 +8,9 @@ import org.xml.sax.XMLReader;
 import org.xml.sax.helpers.XMLReaderFactory;
 
 import by.htp.rentStation.dao.CatalogDAO;
-import by.htp.rentStation.entity.Catalog;
-import by.htp.rentStation.entity.Unit;
+import by.htp.rentStation.domain.Catalog;
+import by.htp.rentStation.domain.Unit;
+
 import static by.htp.rentStation.util.Constant.*;
 
 public class CatalogDAOSAXImpl implements CatalogDAO {

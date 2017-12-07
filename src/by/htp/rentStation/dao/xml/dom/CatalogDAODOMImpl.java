@@ -13,8 +13,8 @@ import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
 import by.htp.rentStation.dao.CatalogDAO;
-import by.htp.rentStation.entity.Catalog;
-import by.htp.rentStation.entity.Unit;
+import by.htp.rentStation.domain.Catalog;
+import by.htp.rentStation.domain.Unit;
 
 public class CatalogDAODOMImpl implements CatalogDAO {
 

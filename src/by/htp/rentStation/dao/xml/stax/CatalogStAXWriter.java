@@ -10,9 +10,9 @@ import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamWriter;
 
 import by.htp.rentStation.dao.xml.MenuTagName;
-import by.htp.rentStation.entity.Catalog;
-import by.htp.rentStation.entity.Unit;
-import by.htp.rentStation.entity.equipment.Bike;
+import by.htp.rentStation.domain.Catalog;
+import by.htp.rentStation.domain.Unit;
+import by.htp.rentStation.domain.equipment.Bike;
 
 public class CatalogStAXWriter {
     public void writeCatalog(Catalog catalog, String filePath) {

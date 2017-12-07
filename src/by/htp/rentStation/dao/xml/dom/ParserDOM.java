@@ -13,13 +13,13 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import by.htp.rentStation.dao.xml.MenuTagName;
-import by.htp.rentStation.entity.Category;
-import by.htp.rentStation.entity.Unit;
-import by.htp.rentStation.entity.accessory.Helmet;
-import by.htp.rentStation.entity.accessory.Protect;
-import by.htp.rentStation.entity.equipment.Bike;
-import by.htp.rentStation.entity.equipment.Gender;
-import by.htp.rentStation.entity.equipment.Roller;
+import by.htp.rentStation.domain.Category;
+import by.htp.rentStation.domain.Unit;
+import by.htp.rentStation.domain.accessory.Helmet;
+import by.htp.rentStation.domain.accessory.Protect;
+import by.htp.rentStation.domain.equipment.Bike;
+import by.htp.rentStation.domain.equipment.Gender;
+import by.htp.rentStation.domain.equipment.Roller;
 
 public class ParserDOM {
 

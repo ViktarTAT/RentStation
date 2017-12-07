@@ -1,7 +1,7 @@
 package by.htp.rentStation.launcher;
 
-import by.htp.rentStation.comand.CommandHendler;
-import by.htp.rentStation.comand.StationAction;
+import by.htp.rentStation.controller.comand.CommandHendler;
+import by.htp.rentStation.controller.comand.StationAction;
 import by.htp.rentStation.view.Menu;
 
 public class Main {
