@@ -5,9 +5,9 @@ import by.htp.rentStation.domain.Unit;
 
 public interface CatalogDAO {
 
-	Catalog readCatalogUnit();
+	Catalog getCatalogUnit();
 
-	Catalog readCatalogRentUnit();
+	Catalog getCatalogRentUnit();
 
 	void writeCatalogUnit(Catalog catalog);
 

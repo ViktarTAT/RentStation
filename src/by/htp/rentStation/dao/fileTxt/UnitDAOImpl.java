@@ -16,7 +16,7 @@ public class UnitDAOImpl implements UnitDAO {
 
 	@Override
 	public Unit searchUnitById(int unitId) {
-		for (Unit unit : dao.readCatalogUnit().getUnits()) {
+		for (Unit unit : dao.getCatalogUnit().getUnits()) {
 			if (unit.getUnitId() == unitId) {
 				return unit;
 			}
@@ -26,7 +26,7 @@ public class UnitDAOImpl implements UnitDAO {
 
 	public void shiftUnitInRentCatalog(Unit unit) {
 		if (unit != null) {
-			Catalog catalog = dao.readCatalogUnit();
+			Catalog catalog = dao.getCatalogUnit();
 			dao.writeUnitInCatalogRentUnit(unit);
 			catalog.getUnits().remove(unit);
 			dao.writeCatalogUnit(catalog);
@@ -35,7 +35,7 @@ public class UnitDAOImpl implements UnitDAO {
 
 	@Override
 	public void removeUnitCatalog(Unit unit) {
-		Catalog catalog = dao.readCatalogUnit();
+		Catalog catalog = dao.getCatalogUnit();
 		catalog.getUnits().remove(unit);
 		dao.writeCatalogUnit(catalog);
 	}

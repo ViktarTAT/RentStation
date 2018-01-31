@@ -8,13 +8,13 @@ import by.htp.rentStation.domain.OrderList;
 import by.htp.rentStation.domain.Unit;
 import by.htp.rentStation.domain.accessory.Accessory;
 import by.htp.rentStation.domain.equipment.Equipment;
-import by.htp.rentStation.service.OrderLogic;
+import by.htp.rentStation.service.OrderService;
 
 import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-public class OrderLogicImpl implements OrderLogic {
+public class OrderLogicImpl implements OrderService {
     private Order order;
     private UnitDAO udao;
     private OrderList orderList;

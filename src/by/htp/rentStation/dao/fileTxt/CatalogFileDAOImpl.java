@@ -13,12 +13,12 @@ public class CatalogFileDAOImpl implements CatalogDAO {
 	private static final String DELIMETER = ",";
 
 	@Override
-	public Catalog readCatalogUnit() {
+	public Catalog getCatalogUnit() {
 		return readCatalog(FILE_PATH);
 	}
 
 	@Override
-	public Catalog readCatalogRentUnit() {
+	public Catalog getCatalogRentUnit() {
 		return readCatalog(FILE_RENT_PATH);
 	}
 

@@ -18,12 +18,12 @@ import by.htp.rentStation.domain.Unit;
 public class CatalogDAOStAXImpl implements CatalogDAO {
 
     @Override
-    public Catalog readCatalogUnit() {
+    public Catalog getCatalogUnit() {
 	return readCatalog(XML_FILE_PATH);
     }
 
     @Override
-    public Catalog readCatalogRentUnit() {
+    public Catalog getCatalogRentUnit() {
 	writeCatalogRentUnit(new Catalog());
 	return readCatalog(XML_FILE_RENT_PATH);
     }

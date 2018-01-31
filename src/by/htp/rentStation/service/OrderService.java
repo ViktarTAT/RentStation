@@ -2,7 +2,7 @@ package by.htp.rentStation.service;
 
 import by.htp.rentStation.domain.Unit;
 
-public interface OrderLogic {
+public interface OrderService {
 
     void createOrder();
 

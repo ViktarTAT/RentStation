@@ -24,7 +24,7 @@ public class ViewOrdersActionImpl implements StationAction {
 				Print.print("-----------");
 				f.format("%tl:%tM", i.getTimeReturnRent(), i.getTimeReturnRent());
 				Print.print("time return: " + f);
-				Print.print("total price per hour: " + i.getTotalPrice());
+				//Print.print("total price per hour: " + i.getTotalPrice());
 			}
 		}
 	}

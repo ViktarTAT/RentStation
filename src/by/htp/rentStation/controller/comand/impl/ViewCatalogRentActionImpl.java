@@ -19,7 +19,7 @@ public class ViewCatalogRentActionImpl implements StationAction {
 
     @Override
     public void performAction() {
-	Catalog catalog = dao.readCatalogRentUnit();
+	Catalog catalog = dao.getCatalogRentUnit();
 	Print.print("------");
 	for (Unit unit : catalog.getUnits()) {
 	    Print.print(unit);

@@ -16,12 +16,12 @@ import static by.htp.rentStation.util.Constant.*;
 public class CatalogDAOSAXImpl implements CatalogDAO {
 
 	@Override
-	public Catalog readCatalogUnit() {
+	public Catalog getCatalogUnit() {
 		return readCatalog(XML_FILE_PATH);
 	}
 
 	@Override
-	public Catalog readCatalogRentUnit() {
+	public Catalog getCatalogRentUnit() {
 		// TODO Auto-generated method stub
 		return null;
 	}
